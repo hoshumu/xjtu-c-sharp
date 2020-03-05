@@ -20,15 +20,17 @@ namespace test
             var i = 1;
             while (true)
             {
-                if (DateTime.IsLeapYear(input[0]++))
+                // if (DateTime.IsLeapYear(input[0]++))
+                if (input[0] % 4 == 0 && input[0] % 100 != 0 || input[0] % 400 == 0)
                 {
                     if(input[1] <= i++)
                     {
                         break;
                     }
                 }
+                input[0]++;
             }
-            Console.WriteLine(--input[0]);
+            Console.WriteLine(input[0]);
         }
     }
 }
