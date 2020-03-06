@@ -13,8 +13,8 @@ namespace test
     {
         static void Main(string[] args)
         {
-            string a;
-            a = Console.ReadLine();
+            
+            var a = Console.ReadLine(); // a = "交大"
             Console.WriteLine("你好-{0}", a);
         }
     }

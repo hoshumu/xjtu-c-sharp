@@ -13,7 +13,7 @@ namespace test
     {
         static void Main(string[] args)
         {
-            char[] input = Console.ReadLine().ToCharArray().Select(x => (char)((int)x + 3)).ToArray();
+            char[] input = Console.ReadLine().ToCharArray().Select(x => (char)((int)x + 3)).ToArray(); // input = {'O', 'r', 'y', 'h'} 
             foreach(char x in input)
             {
                 var i = x;

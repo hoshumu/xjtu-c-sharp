@@ -13,12 +13,12 @@ namespace test
     {
         static void Main(string[] args)
         {
-            int[] input = Console.ReadLine().Split(' ').Select(x => int.Parse(x.Trim())).ToArray();
-            Array.Sort(input);
-            int i = input.Length - 1;
+            int[] input = Console.ReadLine().Split(' ').Select(x => int.Parse(x)).ToArray(); // input = {3, 5, -9, 0, 12, 7, 9, 12, -8, 7}
+            Array.Sort(input); // input = {-9, -8, 0, 3, 5, 7, 7, 9, 12, 12}
+            int i = input.Length - 1; // i = 9
             for(; ; i--)
             {
-                if(input[i] != input[input.Length - 1])
+                if(input[i] != input[input.Length - 1]) // i = 7
                 {
                     break;
                 }
