@@ -21,7 +21,7 @@ namespace test
             var time = input[0] * 6 + 5;
             for(int i = 1; i < input.Length - 1; i++)
             {
-                time += (input[i] - input[i - 1] == 0 ? 0 : input[i] - input[i-1] > 0 ? (input[i] - input[i - 1]) * 6 : (input[i - 1] - input[i]) * 4) + 5; 
+                time += input[i] - input[i-1] > 0 ? (input[i] - input[i - 1]) * 6 : (input[i - 1] - input[i]) * 4) + 5; 
             }
 
             Console.WriteLine(time);
