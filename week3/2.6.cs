@@ -12,32 +12,32 @@ using System;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace test
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            var str = Console.ReadLine();
-            var ins = Console.ReadLine().Split(' ').ToArray();
+namespace test {
+    class Program {
+        static void Main (string[] args) {
+            var str = Console.ReadLine (); // str = "ACBEEBBAD"
+            var ins = Console.ReadLine ().Split (' ').ToArray (); // ins = {"E", "3"}
 
-            str = str.Insert(int.Parse(ins[1]) + 1, ins[0]);
+            str = str.Insert (int.Parse (ins[1]) + 1, ins[0]); // str = "ACBEEEBBAD"
+            // int i = 0;
+            // char j = str[0];
+            // str = "ACBEEEBBAD";
+            // i:     0123456789
+            // j:     ACBE B AD
+            // k:        0120100
 
             string regExp = @"(\w)\1{2}";
-            while (true)
-            {
-                MatchCollection matchList = Regex.Matches(str, regExp);
-                if(matchList.Count == 0)
-                {
+            while (true) {
+                MatchCollection matchList = Regex.Matches (str, regExp); // matchList_0 = {{"EEE"}}, matchList_1 = {{"BBB"}}
+                if (matchList.Count == 0) {
                     break;
                 }
-                foreach (Match match in matchList)
-                {
-                    str = Regex.Replace(str, match.ToString(), "");
+                foreach (Match match in matchList) {
+                    str = Regex.Replace (str, match.ToString (), ""); // str_0 = "ACBBBAD", str_1 = "ACAD"
                 }
-            }
+            } // str = "ACAD"
 
-            Console.WriteLine(str);
+            Console.WriteLine (str);
         }
     }
 }

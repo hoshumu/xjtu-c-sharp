@@ -9,28 +9,22 @@
 using System;
 using System.Linq;
 
-namespace test
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            var input = Console.ReadLine().Split(' ').Select(x => int.Parse(x.Trim())).ToArray();
+namespace test {
+    class Program {
+        static void Main (string[] args) {
+            var input = Console.ReadLine ().Split (' ').Select (x => int.Parse (x.Trim ())).ToArray (); // input = {2005, 3}
 
             var i = 1;
-            while (true)
-            {
+            while (true) {
                 // if (DateTime.IsLeapYear(input[0]++))
-                if (input[0] % 4 == 0 && input[0] % 100 != 0 || input[0] % 400 == 0)
-                {
-                    if(input[1] <= i++)
-                    {
+                if (input[0] % 4 == 0 && input[0] % 100 != 0 || input[0] % 400 == 0) {
+                    if (input[1] <= i++) {
                         break;
                     }
                 }
                 input[0]++;
-            }
-            Console.WriteLine(input[0]);
+            } // input = {2016, 3}, i = 4
+            Console.WriteLine (input[0]);
         }
     }
 }

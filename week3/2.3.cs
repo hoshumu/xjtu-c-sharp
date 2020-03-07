@@ -7,23 +7,19 @@
 using System;
 using System.Linq;
 
-namespace test
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            var input = Console.ReadLine().Split(' ').Select(x => int.Parse(x.Trim())).ToArray();
+namespace test {
+    class Program {
+        static void Main (string[] args) {
+            var input = Console.ReadLine ().Split (' ').Select (x => int.Parse (x.Trim ())).ToArray (); // input = {1, 5}
 
             int num = 0;
             string s = "";
-            for(int i = 0;i < input[1]; i++)
-            {
-                s += input[0];
-                num += int.Parse(s);
+            for (int i = 0; i < input[1]; i++) {
+                s += input[0]; // s_0 = "1", s_1 = "11", s_2 = "111", s_4 = "1111", s_5 = "11111"
+                num += int.Parse (s); // num_0 = 1, num_1 = 12, num_2 = 123, num_4 = 1234, num_5 = 12345
             }
 
-            Console.WriteLine(num);
+            Console.WriteLine (num);
         }
     }
 }

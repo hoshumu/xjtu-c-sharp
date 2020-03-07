@@ -8,14 +8,11 @@
 using System;
 using System.Linq;
 
-namespace test
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            var input = Console.ReadLine().Split(' ').Select(x => int.Parse(x)).ToArray(); // a = {2, 3}
-            Console.WriteLine("{0} {1} {2} {3}", input[0] + input[1], input[0] - input[1], input[0] * input[1], input[0] / input[1]);
+namespace test {
+    class Program {
+        static void Main (string[] args) {
+            var input = Console.ReadLine ().Split (' ').Select (x => int.Parse (x)).ToArray (); // a = {2, 3}
+            Console.WriteLine ("{0} {1} {2} {3}", input[0] + input[1], input[0] - input[1], input[0] * input[1], input[0] / input[1]);
         }
     }
 }

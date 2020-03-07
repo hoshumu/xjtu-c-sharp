@@ -10,30 +10,23 @@
 using System;
 using System.Linq;
 
-namespace test
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            var input = Console.ReadLine().Split(' ').Select(x => int.Parse(x.Trim())).ToArray();
+namespace test {
+    class Program {
+        static void Main (string[] args) {
+            var input = Console.ReadLine ().Split (' ').Select (x => int.Parse (x.Trim ())).ToArray (); // input = {1, 100}
 
             var num = 0;
-            for(int i = input[0];i <= input[1] - 2;i++)
-            {
-                for(int j = i + 1;j <= input[1] - 1; j++)
-                {
-                    for(int k = j + 1; k <= input[1]; k++)
-                    {
-                        if(i*i+j*j == k * k)
-                        {
+            for (int i = input[0]; i <= input[1] - 2; i++) {
+                for (int j = i + 1; j <= input[1] - 1; j++) {
+                    for (int k = j + 1; k <= input[1]; k++) {
+                        if (i * i + j * j == k * k) {
                             num++;
                         }
                     }
                 }
-            }
+            } // num = 52
 
-            Console.WriteLine(num);
+            Console.WriteLine (num);
         }
     }
 }

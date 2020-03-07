@@ -7,15 +7,12 @@
 
 using System;
 
-namespace test
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            
-            var a = Console.ReadLine(); // a = "交大"
-            Console.WriteLine("你好-{0}", a);
+namespace test {
+    class Program {
+        static void Main (string[] args) {
+
+            var a = Console.ReadLine (); // a = "交大"
+            Console.WriteLine ("你好-{0}", a);
         }
     }
 }

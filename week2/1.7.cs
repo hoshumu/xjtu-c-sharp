@@ -13,29 +13,21 @@
 using System;
 using System.Linq;
 
-namespace test
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            var lock_input = int.Parse(Console.ReadLine()); // lock_input_0 = 0, lock_input_1 = 1
-            int[] input= Console.ReadLine().ToCharArray().Select(x => int.Parse(x.ToString())).ToArray(); // input_0 = {5, 4, 9, 3}, input_1 = {6, 0, 2, 1}
-            if(lock_input == 0)
-            {
-                for(int i = 0; i < input.Length; i++)
-                {
-                    input[i] = (input[i] + 7) % 10 ;
+namespace test {
+    class Program {
+        static void Main (string[] args) {
+            var lock_input = int.Parse (Console.ReadLine ()); // lock_input_0 = 0, lock_input_1 = 1
+            int[] input = Console.ReadLine ().ToCharArray ().Select (x => int.Parse (x.ToString ())).ToArray (); // input_0 = {5, 4, 9, 3}, input_1 = {6, 0, 2, 1}
+            if (lock_input == 0) {
+                for (int i = 0; i < input.Length; i++) {
+                    input[i] = (input[i] + 7) % 10;
                 } // input_0 = {2, 1, 6, 0}
-                Console.WriteLine("{0}{1}{2}{3}", input[2], input[3], input[0], input[1]);
-            }
-            else
-            {
-                for (int i = 0; i < input.Length; i++)
-                {
-                    input[i] = input[i]>=7 ? input[i]-7: (input[i] + 10) - 7;
+                Console.WriteLine ("{0}{1}{2}{3}", input[2], input[3], input[0], input[1]);
+            } else {
+                for (int i = 0; i < input.Length; i++) {
+                    input[i] = input[i] >= 7 ? input[i] - 7 : (input[i] + 10) - 7;
                 } // input_1 = {9, 3, 5, 4}
-                Console.WriteLine("{0}{1}{2}{3}", input[2], input[3], input[0], input[1]);
+                Console.WriteLine ("{0}{1}{2}{3}", input[2], input[3], input[0], input[1]);
             }
         }
     }

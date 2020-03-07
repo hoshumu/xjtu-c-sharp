@@ -7,25 +7,23 @@
 using System;
 using System.Linq;
 
-namespace test
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            char[] input = Console.ReadLine().ToCharArray().Select(x => (char)((int)x + 3)).ToArray(); // input = {'O', 'r', 'y', 'h'} 
-            foreach(char x in input)
-            {
+namespace test {
+    class Program {
+        static void Main (string[] args) {
+            char[] input = Console.ReadLine ().ToCharArray ().Select (x => (char) ((int) x + 3)).ToArray (); // input = {'O', 'r', 'y', 'h'} 
+            foreach (char x in input) {
                 var i = x;
-                if((int)x-3 >= (int)'x' && (int)x-3 <= (int)'z')
-                {
-                    i = (char)((int)x - 26);
+                if ((int) x - 3 >= (int)
+                    'x' && (int) x - 3 <= (int)
+                    'z') {
+                    i = (char) ((int) x - 26);
                 }
-                if ((int)x-3 >= (int)'X' && (int)x-3 <= (int)'Z')
-                {
-                    i = (char)((int)x - 26);
+                if ((int) x - 3 >= (int)
+                    'X' && (int) x - 3 <= (int)
+                    'Z') {
+                    i = (char) ((int) x - 26);
                 }
-                Console.Write("{0}", i);
+                Console.Write ("{0}", i);
             }
         }
     }

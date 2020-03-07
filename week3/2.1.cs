@@ -10,35 +10,27 @@
 
 using System;
 
-namespace test
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            var num = int.Parse(Console.ReadLine());
+namespace test {
+    class Program {
+        static void Main (string[] args) {
+            var num = int.Parse (Console.ReadLine ()); // num = 100
 
             var output = "";
 
-            for (int i = 3; i <= num; i+=2)
-            {
-                if (prime(i) && prime(i+2))
-                {
-                    output+= String.Format("({0},{1}), ", i, i + 2 );
+            for (int i = 3; i <= num; i += 2) {
+                if (prime (i) && prime (i + 2)) {
+                    output += String.Format ("({0},{1}), ", i, i + 2); // output_0 = "(3,5), "
                 }
-            }
+            } // output = "(3,5), (5,7), (11,13), (17,19), (29,31), (41,43), (59,61), (71,73), "
 
-            output = output.Substring(0, output.Length - 2);
+            output = output.Substring (0, output.Length - 2); // output = "(3,5), (5,7), (11,13), (17,19), (29,31), (41,43), (59,61), (71,73)"
 
-            Console.WriteLine(output);
+            Console.WriteLine (output);
         }
 
-        static bool prime(int num)
-        {
-            for (int i = 2; i < Math.Sqrt(num) + 1; i++)
-            {
-                if (num % i == 0)
-                {
+        static bool prime (int num) {
+            for (int i = 2; i < Math.Sqrt (num) + 1; i++) {
+                if (num % i == 0) {
                     return false;
                 }
             }

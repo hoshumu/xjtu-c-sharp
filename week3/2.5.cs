@@ -10,21 +10,17 @@
 using System;
 using System.Linq;
 
-namespace test
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            var input = Console.ReadLine().Split(' ').Select(x => int.Parse(x.Trim())).ToArray();
+namespace test {
+    class Program {
+        static void Main (string[] args) {
+            var input = Console.ReadLine ().Split (' ').Select (x => int.Parse (x.Trim ())).ToArray (); // input = {2, 1, 0}
 
-            var time = input[0] * 6 + 5;
-            for(int i = 1; i < input.Length - 1; i++)
-            {
-                time += input[i] - input[i-1] > 0 ? (input[i] - input[i - 1]) * 6 : (input[i - 1] - input[i]) * 4) + 5; 
-            }
+            var time = input[0] * 6 + 5; // time = 17
+            for (int i = 1; i < input.Length - 1; i++) {
+                time += (input[i] - input[i - 1] > 0 ? (input[i] - input[i - 1]) * 6 : (input[i - 1] - input[i]) * 4) + 5; // time_1 = 26
+            } // time = 26
 
-            Console.WriteLine(time);
+            Console.WriteLine (time);
         }
     }
 }
