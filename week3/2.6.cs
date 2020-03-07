@@ -25,6 +25,7 @@ namespace test {
             // i:     0123456789
             // j:     ACBE B AD
             // k:        0120100
+            // str.Remove(i - 2, 3);
 
             string regExp = @"(\w)\1{2}";
             while (true) {
