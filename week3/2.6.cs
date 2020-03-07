@@ -20,11 +20,12 @@ namespace test {
 
             str = str.Insert (int.Parse (ins[1]) + 1, ins[0]); // str = "ACBEEEBBAD"
             // int i = 0;
+            // int k = 0;
             // char j = str[0];
             // str = "ACBEEEBBAD";
             // i:     0123456789
             // j:     ACBE B AD
-            // k:        0120100
+            // k:       0120100
             // str.Remove(i - 2, 3);
 
             string regExp = @"(\w)\1{2}";
