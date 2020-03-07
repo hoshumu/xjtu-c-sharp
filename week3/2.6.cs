@@ -25,7 +25,7 @@ namespace test {
             // str = "ACBEEEBBAD";
             // i:     0123456789
             // j:     ACBE B AD
-            // k:       0120100
+            // k:        012010
             // str.Remove(i - 2, 3);
 
             string regExp = @"(\w)\1{2}";
