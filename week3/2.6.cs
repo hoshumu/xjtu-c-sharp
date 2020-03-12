@@ -22,9 +22,9 @@ namespace test {
             // int i = 0;
             // int k = 0;
             // char j = str[0];
-            // str = "ACBEEEBBAD";
+            // str = "ACBEEEBBADD";
             // i:     0123456789
-            // j:     ACBE B AD
+            // j:      ACBE E BA
             // k:        012010
             // str.Remove(i - 2, 3);
 
